@@ -37,7 +37,6 @@ public class RestClient {
             }
         })
                 .setObjectMapper(new ObjectMapper() {
-
                     @Override
                     public <T> T readValue(String value, Class<T> valueType) {
                         try {
