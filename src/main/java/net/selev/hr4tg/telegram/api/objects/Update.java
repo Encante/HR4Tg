@@ -9,5 +9,5 @@ import lombok.experimental.FieldDefaults;
 public class Update {
     Long updateId;
     Message message;
-    CallbackQuery callbackQuery;
+//    CallbackQuery callbackQuery;
 }

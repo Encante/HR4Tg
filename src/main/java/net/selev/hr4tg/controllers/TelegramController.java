@@ -1,6 +1,7 @@
 package net.selev.hr4tg.controllers;
 
 import lombok.extern.slf4j.Slf4j;
+import net.selev.hr4tg.telegram.api.objects.Update;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TelegramController {
 
     @PostMapping("HR4tg")
-    public void telegramHandler(RequestBody Update update){
+    public void telegramHandler(@RequestBody Update update){
 
     }
 }

@@ -1,7 +1,7 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '3.3.2'
-    id 'io.spring.dependency-management' version '1.1.6'
+    id 'org.springframework.boot' version '3.5.0'
+    id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'net.selev'
@@ -9,7 +9,7 @@ version = '0.0.1'
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(22)
+        languageVersion = JavaLanguageVersion.of(23)
     }
 }
 
@@ -24,21 +24,19 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter:3.3.2'
+    implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.slf4j:slf4j-api:2.0.12'
-    implementation 'ch.qos.logback:logback-classic:1.5.6'
-    implementation 'ch.qos.logback:logback-core:1.5.6'
-    implementation 'org.springframework.boot:spring-boot-starter-web:3.3.2'
-    compileOnly 'org.projectlombok:lombok:1.18.34'
+    implementation 'ch.qos.logback:logback-classic:1.5.18'
+    implementation 'ch.qos.logback:logback-core:1.5.18'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    // https://mvnrepository.com/artifact/com.konghq/unirest-modules-gson
-    implementation 'com.konghq:unirest-modules-gson:4.4.4'
-    // https://mvnrepository.com/artifact/com.konghq/unirest-java-core
-    compileOnly 'com.konghq:unirest-java-core:4.4.4'
-    // https://mvnrepository.com/artifact/com.google.code.gson/gson
-    implementation 'com.google.code.gson:gson:2.11.0'
+    implementation platform ('com.konghq:unirest-java-bom:4.4.5')
+    implementation 'com.konghq:unirest-java-core'
+    implementation 'com.konghq:unirest-modules-gson'
+    implementation 'com.google.code.gson:gson:2.13.1'
 }
 
-//tasks.named('test') {
-//    useJUnitPlatform()
-//}
+tasks.named('test') {
+    useJUnitPlatform()
+}
