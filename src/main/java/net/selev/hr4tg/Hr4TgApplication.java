@@ -16,7 +16,7 @@ public class Hr4TgApplication {
         ApplicationContext ctx = SpringApplication.run(Hr4TgApplication.class, args);
         Secrets secrets = ctx.getBean(Secrets.class);
         RestClient rc = ctx.getBean(RestClient.class);
-        SendMessage msg = new SendMessage(secrets.JA_CHATID,"Test Message");
+        SendMessage msg = new SendMessage(secrets.JA_CHATID,"Hello world!");
         Response response = rc.standardTgJsonPost("sendmessage", msg);
         log.info("Send Message {}",response.toString());
     }

@@ -1,5 +1,5 @@
 FROM ghcr.io/encante/arch-temurin-23:1.0
-LABEL author = "Enc"
+LABEL author="Enc"
 
 WORKDIR /app
 

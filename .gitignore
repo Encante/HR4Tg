@@ -36,4 +36,3 @@ out/
 ### VS Code ###
 .vscode/
 /logs/
-/src/main/java/net/selev/hr4tg/config/Secrets.java
