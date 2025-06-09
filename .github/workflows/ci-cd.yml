@@ -46,5 +46,5 @@ jobs:
           port: 25552
           script: |
             cd /home/enc/docker
-            docker compose pull
-            docker compose up -d
+            docker compose -f docker-compose.yml -f docker-compose.hr4tg.yml pull hr4tg
+            docker compose -f docker-compose.yml -f docker-compose.hr4tg.yml up -d hr4tg
